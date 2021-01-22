@@ -19,7 +19,7 @@ public class BasicIT {
         Page page = context.newPage();
 
         page.navigate("http://localhost:8080/");
-        page.type("vaadin-text-field[label='Your name']", "James Bond");
+        page.type("vaadin-text-field", "James Bond");
         page.click("vaadin-button");
         Assert.assertEquals("Hello James Bond", page.innerText("vaadin-notification-card"));
 
